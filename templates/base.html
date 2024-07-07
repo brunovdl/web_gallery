@@ -10,7 +10,7 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="/">
             <img src="/static/images/logoieq.png" alt="logo" width="40" height="36" class="d-inline-block align-text-center">
             <b>Fotos dos Cultos</b>
         </a>
@@ -21,33 +21,33 @@
             <ul class="nav nav-tabs">
                 {% if 'user_id' in session %}
                 <li class="nav-item">
-                    <a class="nav-link" href="/">Galeria</a>
+                    <a class="nav-link text-white" href="/"><b>Galeria</b></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/upload">Upload</a>
+                    <a class="nav-link text-white" href="/upload"><b>Upload</b></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/register">Registrar</a>
+                    <a class="nav-link text-white" href="/register"><b>Registrar</b></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/logout">Logout</a>
+                    <a class="nav-link text-white" href="/logout"><b>Logout</b></a>
                 </li>
                 {% else %}
                 <li class="nav-item">
-                    <a class="nav-link" href="/"><b>Galeria</b></a>
+                    <a class="nav-link text-white" href="/"><b>Galeria</b></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/login"><b>Login</b></a>
+                    <a class="nav-link text-white" href="/login"><b>Login</b></a>
                 </li>
                 {% endif %}
             </ul>
 
             <span class="navbar-text ml-auto">
                 {% if 'user_id' in session %}
-                    Usuário: {{ session['username']}}
+                    <b>{{ session['username']}}</b>
                     <button class="btn btn-outline-light btn-sm ml-2" onclick="openCamera()"><b>Abrir Câmera</b></button>
                 {% else %}
-                    Visitante
+                    <b>Visitante</b>
                 {% endif %}
             </span>
         </div>
